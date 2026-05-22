@@ -10,7 +10,7 @@ const { hero } = homeContent
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 44 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 1.1, ease: [0.16, 1, 0.3, 1], delay },
+  transition: { duration: 1.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay },
 })
 
 export default function Hero() {
