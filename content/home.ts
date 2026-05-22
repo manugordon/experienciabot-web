@@ -182,6 +182,12 @@ export const homeContent = {
         bio: 'PLACEHOLDER', // TODO: bio real
         photo: '/images/team/paula.jpg', // TODO: agregar foto real
       },
+      {
+        name: 'Seba PLACEHOLDER', // TODO: apellido real
+        credential: 'PLACEHOLDER', // TODO: credencial real
+        bio: 'PLACEHOLDER', // TODO: bio real
+        photo: '/images/team/seba.jpg', // TODO: agregar foto real
+      },
     ],
     linkLabel: 'Conocernos mejor',
     linkHref: '/quienes-somos',
