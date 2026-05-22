@@ -130,7 +130,7 @@ export default function Packages() {
   const ac = cardStyles[activePackage.id as CardId] ?? cardStyles.base
 
   return (
-    <section id="paquetes" className="py-20 lg:py-[80px] bg-white">
+    <section id="paquetes" className="py-20 lg:py-[80px] bg-surface-gray">
       <Container>
         <div className="max-w-2xl mb-12">
           <h2 className="text-[32px] lg:text-[36px] font-bold leading-[1.2] text-black mb-4">
