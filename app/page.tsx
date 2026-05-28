@@ -9,7 +9,6 @@ import HowWeWork from '@/components/sections/HowWeWork'
 import Packages from '@/components/sections/Packages'
 import CaseStudyPreview from '@/components/sections/CaseStudyPreview'
 import TeamPreview from '@/components/sections/TeamPreview'
-import SafetyBanner from '@/components/sections/SafetyBanner'
 import FAQPreview from '@/components/sections/FAQPreview'
 import FinalCTA from '@/components/sections/FinalCTA'
 
@@ -27,7 +26,6 @@ export default function HomePage() {
         <Packages />
         <CaseStudyPreview />
         <TeamPreview />
-        <SafetyBanner />
         <FAQPreview />
         <FinalCTA />
       </main>

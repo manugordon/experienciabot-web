@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import { homeContent } from '@/content/home'
 
@@ -11,18 +12,13 @@ export default function CredibilityStrip() {
           {credibility.label}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-          {credibility.items.map((item) => (
-            <div key={item.name} className="flex items-center">
-              {item.type === 'logo' ? (
-                /* TODO: reemplazar con <Image> cuando lleguen los logos */
-                <span className="text-[14px] font-bold text-black/50 uppercase tracking-wide">
-                  {item.name}
-                </span>
-              ) : (
-                <span className="text-[14px] text-black/50">{item.name}</span>
-              )}
-            </div>
-          ))}
+          <Image
+            src="/images/testimonials/educabotLogo.svg"
+            alt="Educabot"
+            width={200}
+            height={40}
+            className="opacity-60"
+          />
         </div>
       </Container>
     </section>

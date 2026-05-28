@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import AnimateIn from '@/components/ui/AnimateIn'
 import { StaggerList, StaggerItem } from '@/components/ui/StaggerList'
@@ -16,11 +17,15 @@ export default function TeamPreview() {
           <p className="text-[17px] text-black/60">{team.subheadline}</p>
         </AnimateIn>
 
-        <StaggerList className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl">
+        <StaggerList className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.members.map((member) => (
             <StaggerItem key={member.name}>
               <div className="flex items-start gap-5">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex-shrink-0" />
+                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                  {member.photo && (
+                    <Image src={member.photo} alt={member.name} fill className="object-cover" sizes="64px" />
+                  )}
+                </div>
                 <div>
                   <p className="text-[17px] font-bold text-black">{member.name}</p>
                   <p className="text-[13px] text-black/50 mb-2">{member.credential}</p>

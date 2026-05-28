@@ -12,27 +12,19 @@ export default function Testimonial() {
     <section className="py-20 lg:py-[80px] bg-brand-blue overflow-hidden">
       <Container>
         <AnimateIn>
-          <h2 className="text-[28px] lg:text-[32px] font-bold text-white mb-12 max-w-xl">
+          <h2 className="text-[28px] lg:text-[32px] font-bold text-white mb-12 max-w-xl lg:max-w-none lg:whitespace-nowrap">
             {testimonial.sectionHeadline}
           </h2>
         </AnimateIn>
 
-        <AnimateIn delay={0.15}>
-          <figure className="flex flex-col lg:flex-row items-start gap-10 max-w-3xl">
-            {/* School logo */}
-            <div className="relative w-20 h-20 lg:w-24 lg:h-24 flex-shrink-0">
-              <Image
-                src={photo}
-                alt={school}
-                fill
-                className="object-contain"
-                sizes="144px"
-              />
+        {/* Mobile / tablet layout */}
+        <AnimateIn delay={0.15} className="lg:hidden">
+          <figure className="flex flex-col items-start gap-8 max-w-2xl">
+            <div className="relative w-20 h-20 flex-shrink-0">
+              <Image src={photo} alt={school} fill className="object-contain" sizes="80px" />
             </div>
-
-            {/* Quote */}
-            <div className="flex flex-col justify-between h-full">
-              <blockquote className="text-[19px] lg:text-[21px] text-white leading-relaxed mb-8 italic">
+            <div>
+              <blockquote className="text-[19px] text-white leading-relaxed mb-8 italic">
                 &ldquo;{quote}&rdquo;
               </blockquote>
               <figcaption className="flex items-center gap-4">
@@ -43,6 +35,29 @@ export default function Testimonial() {
                 </div>
               </figcaption>
             </div>
+          </figure>
+        </AnimateIn>
+
+        {/* Desktop layout */}
+        <AnimateIn delay={0.15} className="hidden lg:grid lg:grid-cols-[280px_1fr] gap-16 items-center">
+          <div className="flex flex-col items-center gap-5">
+            <div className="relative w-52 h-52">
+              <Image src={photo} alt={school} fill className="object-contain drop-shadow-lg" sizes="208px" />
+            </div>
+            <p className="text-[13px] text-white/50 text-center tracking-wide uppercase">{school}</p>
+          </div>
+
+          <figure>
+            <blockquote className="text-[22px] text-white leading-relaxed mb-10 italic">
+              &ldquo;{quote}&rdquo;
+            </blockquote>
+            <figcaption className="flex items-center gap-4">
+              <div className="w-1 h-10 rounded-full bg-brand-yellow flex-shrink-0" />
+              <div>
+                <p className="text-[16px] font-bold text-white">{author}</p>
+                <p className="text-[14px] text-white/70">{role}</p>
+              </div>
+            </figcaption>
           </figure>
         </AnimateIn>
       </Container>

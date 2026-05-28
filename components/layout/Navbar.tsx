@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react'
 import Container from '@/components/ui/Container'
 import Button from '@/components/ui/Button'
 import { navigationContent } from '@/content/navigation'
+
 import { cn } from '@/lib/utils'
 
 export default function Navbar() {

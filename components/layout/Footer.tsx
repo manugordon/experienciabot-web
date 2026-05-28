@@ -67,12 +67,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://instagram.com/labot.ar"
+                  href="https://www.instagram.com/experienciabot/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[15px] text-black/70 hover:text-black transition-colors duration-150"
                 >
-                  @labot.ar
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/123013940"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[15px] text-black/70 hover:text-black transition-colors duration-150"
+                >
+                  LinkedIn
                 </a>
               </li>
             </ul>

@@ -1,36 +1,41 @@
 export const homeContent = {
   hero: {
-    headline: 'Gestionamos el área tecnológica de tu institución',
+    headline: 'Que la tecnología en tu colegio tenga sentido.',
     subheadline:
-      'Currícula alineada al Diseño Curricular Provincial, formación docente continua, certificaciones oficiales y un coordinador pedagógico dedicado. Tu colegio cumple con los estándares. Vos no cargás solo con la tarea.',
+      'Los dispositivos no alcanzan. Hace falta un proyecto detrás, ese es nuestro trabajo.',
+    description:
+      'Tus estudiantes van a necesitar la tecnología como si fuera su idioma nativo. Nosotros construimos ese camino con tu institución, de jardín a secundaria, con coherencia pedagógica en cada nivel y certificaciones que lo acreditan, un/a coordinador/a dedicado/a, currícula actualizada, docentes formados y familias informadas.',
     ctaPrimary: {
-      label: 'Reservar videollamada',
+      label: 'Agendá tu llamada',
       href: 'https://calendly.com/PLACEHOLDER', // TODO: URL real de Calendly de Nacho
     },
     ctaSecondary: {
-      label: 'Ver paquetes',
+      label: 'Ver propuestas',
       href: '/#paquetes',
+    },
+    whatsapp: {
+      label: 'Prefiero escribir por WhatsApp',
+      href: 'https://wa.me/5492215053158',
     },
   },
 
   credibility: {
     label: 'Avalados por instituciones académicas y tecnológicas de referencia',
     items: [
-      { name: 'UTN Regional La Plata', type: 'logo' as const }, // TODO: confirmar uso del logo con Nacho
-      { name: 'Code.org', type: 'logo' as const },
-      { name: 'Aval académico Educabot', type: 'text' as const },
-      // { name: 'EDLP', type: 'logo' as const }, // Activar cuando se confirme el acuerdo
+      // { name: 'UTN Regional La Plata', type: 'logo' as const }, // pendiente de aval
+      // { name: 'Code.org', type: 'logo' as const }, // pendiente de autorización
+      { name: 'Educabot', type: 'logo' as const },
     ],
   },
 
   problem: {
     headline: 'Gestionar la tecnología educativa es cada vez más complejo',
-    subheadline: 'Los directivos llevan ese peso solos.',
+    subheadline: 'Tener tecnología no es lo mismo que usarla bien.',
     items: [
-      'Docentes sin actualización en herramientas digitales ni metodologías vigentes',
-      'Equipamiento obsoleto o mal aprovechado',
-      'Normativa educativa que cambia y exige cada vez más',
-      'Familias que demandan más tecnología y pocas respuestas disponibles',
+      'Docentes con ganas de incorporar tecnología, pero sin la formación ni el tiempo para hacerlo bien en el aula.',
+      'Tecnología que existe en la institución pero que sin proyecto pedagógico no genera aprendizaje real.',
+      'Padres que piden más tecnología en el aula, y vos no tenés una respuesta concreta para darles.',
+      'Normativa educativa que cambia y exige cada vez más.',
     ],
   },
 
@@ -40,17 +45,17 @@ export const homeContent = {
       {
         title: 'Gestión pedagógica y curricular',
         description:
-          'Diseñamos y actualizamos la currícula anual de tu institución. Secuencias didácticas alineadas al Diseño Curricular PBA, ODS UNESCO 2030, UNICEF y OMS. La planificación del año, resuelta.',
+          'Diseñamos la currícula anual adaptada a las necesidades de tu institución. Secuencias didácticas por sala, grado y año, con actividades alineadas al diseño curricular jurisdiccional y a directrices de ODS UNESCO 2030, UNICEF y OMS. La planificación del año, resuelta.',
       },
       {
         title: 'Acompañamiento institucional y docente',
         description:
-          'Un coordinador pedagógico dedicado con visitas periódicas, informes de seguimiento y canal permanente de asesoría. Capacitación continua para docentes del área y de otras áreas.',
+          'Un/a coordinador/a pedagógico/a dedicado/a con visitas periódicas, informes de seguimiento y canal permanente de asesoría. Capacitación continua para docentes del área y de otras áreas.',
       },
       {
         title: 'Recursos tecnológicos y certificaciones',
         description:
-          'Validación del equipamiento existente, kits de robótica en comodato, recursos a precio preferencial y certificaciones oficiales avaladas por UTN Regional La Plata, Educabot y Code.org.',
+          'Validación del equipamiento existente, kits de robótica en comodato, recursos a precio preferencial y certificaciones oficiales avaladas.',
       },
     ],
     linkLabel: 'Ver metodología completa',
@@ -65,7 +70,7 @@ export const homeContent = {
       author: 'Graciela Rodríguez',
       role: 'Directora General',
       school: 'Colegio Manantiales, La Plata',
-      photo: '/images/testimonials/manantiales.avif',
+      photo: '/images/testimonials/manantiales25.png',
     },
     // videoUrl: 'https://www.youtube.com/embed/PLACEHOLDER', // Descomentar cuando el video esté listo
   },
@@ -79,13 +84,13 @@ export const homeContent = {
         number: '01',
         title: 'Nos conocemos',
         description:
-          'Videollamada de 30 minutos para entender tu institución: contexto, necesidades y posibilidades.',
+          'Videollamada de 30 minutos para entendernos: nos das contexto, haces consultas y entendemos las necesidades y posibilidades de tu institución, gratis, sin compromiso de nada.',
       },
       {
         number: '02',
-        title: 'Diagnóstico',
+        title: 'Diagnóstico gratuito',
         description:
-          'Relevamiento del área tecnológica: equipamiento, currícula actual, perfil docente. Entregamos un informe de situación.',
+          'Visitamos tu institución y realizamos un relevamiento total del área tecnológica: equipamiento, currícula actual, perfil docente. Entregamos un informe de situación.',
       },
       {
         number: '03',
@@ -95,15 +100,15 @@ export const homeContent = {
       },
       {
         number: '04',
-        title: 'Lanzamiento',
+        title: 'Inicio y capacitación',
         description:
-          'Kick-off con el equipo docente, puesta en marcha del plan pedagógico y coordinador asignado.',
+          'Kick-off con el equipo docente, puesta en marcha del plan pedagógico y coordinador/a asignado/a con capacitaciones a todos los docentes.',
       },
       {
         number: '05',
         title: 'Seguimiento continuo',
         description:
-          'Visitas periódicas, informes de avance, ajustes en tiempo real. El coordinador está disponible durante todo el año.',
+          'Visitas periódicas, informes de avance, ajustes en tiempo real. El/La coordinador/a está disponible durante todo el año.',
       },
     ],
     linkLabel: 'Ver proceso completo',
@@ -116,33 +121,33 @@ export const homeContent = {
       'No todos los colegios necesitan lo mismo ni están en el mismo punto. Los tres paquetes cubren distintos niveles de compromiso y presupuesto.',
     items: [
       {
-        id: 'extracurricular',
-        name: 'EXTRACURRICULAR',
-        tagline: 'La puerta de entrada más simple',
+        id: 'starters',
+        name: 'STARTERS',
+        tagline: 'La puerta de entrada',
         description:
-          'El colegio cede el espacio. Nosotros llevamos docentes, materiales y plan pedagógico. Las familias se inscriben directamente con La Bot.',
+          'Si tu colegio todavía está explorando cómo incorporar tecnología educativa, o si buscás potenciar lo que ya están haciendo, Starters es la opción para arrancar sin presiones. Acompañamos de cerca la implementación de un taller o espacio extracurricular: te damos la currícula, los materiales y el soporte para que tu equipo pueda llevarlo adelante. Es la forma perfecta de conocernos, ver cómo trabajamos y evaluar si querés dar el siguiente paso.',
         recommended: false,
-        cta: 'Reservar videollamada',
+        cta: 'Agendá tu llamada',
         ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
       },
       {
         id: 'base',
         name: 'BASE',
-        tagline: 'La gestión esencial del área tecnológica',
+        tagline: 'Primer paso sólido',
         description:
-          'Currícula anual, certificaciones, kits en comodato, capacitación docente y visita trimestral del coordinador.',
+          'Todo el respaldo pedagógico y curricular del plan Full, con un alcance más acotado. Ideal para instituciones que quieren dar un primer paso sólido sin comprometer todos los niveles o áreas de una vez. Misma calidad, mismo acompañamiento, implementación más gradual.',
         recommended: false,
-        cta: 'Reservar videollamada',
+        cta: 'Agendá tu llamada',
         ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
       },
       {
         id: 'full',
         name: 'FULL',
-        tagline: 'Gestión completa con acompañamiento mensual',
+        tagline: 'El programa completo',
         description:
-          'Todo el BASE más formación transversal para docentes de otras áreas, muestra tecnológica anual, docente suplente incluido y visita mensual del coordinador.',
+          'Diseñamos la currícula tecnológica de tu institución, capacitamos a tus docentes y acompañamos durante todo el año con un/a coordinador/a que visita la institución todos los meses. Es la opción para colegios que quieren que la tecnología educativa sea una parte real y sostenida de su propuesta pedagógica — no un taller aislado, sino algo que atraviesa toda la institución, da herramientas a todo el equipo docente y deja huella real en sus estudiantes.',
         recommended: true,
-        cta: 'Reservar videollamada',
+        cta: 'Agendá tu llamada',
         ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
       },
     ],
@@ -153,16 +158,16 @@ export const homeContent = {
   },
 
   caseStudy: {
-    headline: 'Un caso real, documentado con honestidad',
+    headline: 'Organizaciones que nos eligen',
     description:
-      'Trabajamos con un colegio piloto en La Plata. Esto es lo que construimos juntos.',
+      'Junto al Club Estudiantes de La Plata, llevamos adelante Estudiantes Innova 2026: un programa integral de talleres gratuitos abiertos a toda la comunidad. Como socios pedagógicos y directores del proyecto, nuestro objetivo es convertir al club en un referente nacional de innovación educativa.',
     metrics: [
-      // TODO: reemplazar con métricas reales del colegio (Nacho las provee)
-      { value: 'PLACEHOLDER', label: 'PLACEHOLDER' },
-      { value: 'PLACEHOLDER', label: 'PLACEHOLDER' },
-      { value: 'PLACEHOLDER', label: 'PLACEHOLDER' },
+      { value: 'Robótica Educativa', label: '' },
+      { value: 'Programación de Videojuegos', label: '' },
+      { value: 'Inteligencia Artificial', label: '' },
+      { value: 'Talleres Maker', label: '' },
     ],
-    linkLabel: 'Leer el caso completo',
+    linkLabel: 'Conocer el proyecto',
     linkHref: '/caso-de-estudio',
   },
 
@@ -172,21 +177,21 @@ export const homeContent = {
     members: [
       {
         name: 'Ignacio Alonso',
-        credential: 'Ingeniero Industrial, UNLP',
-        bio: 'Fundador de La Bot. Diseñó la propuesta pedagógica de Experiencia Bot y coordina el vínculo con cada institución.',
-        photo: '/images/team/nacho.jpg', // TODO: agregar foto real
+        credential: 'Ingeniero Industrial (UNLP)',
+        bio: 'Co-Fundador de La Bot y Experiencia Bot. Docente y coordinador de instituciones. Gestión e implementación del proyecto.',
+        photo: '/images/team/ignacio.PNG',
       },
       {
-        name: 'Paula PLACEHOLDER', // TODO: apellido real
-        credential: 'PLACEHOLDER', // TODO: credencial real
-        bio: 'PLACEHOLDER', // TODO: bio real
-        photo: '/images/team/paula.jpg', // TODO: agregar foto real
+        name: 'Paula Olavarría',
+        credential: 'Ingeniera Industrial (UTN La Plata)',
+        bio: 'Co-Fundadora de La Bot y Experiencia Bot. Docente y coordinadora de instituciones. Coordina los vínculos institucionales y el desarrollo del proyecto.',
+        photo: '/images/team/paula.PNG',
       },
       {
-        name: 'Seba PLACEHOLDER', // TODO: apellido real
-        credential: 'PLACEHOLDER', // TODO: credencial real
-        bio: 'PLACEHOLDER', // TODO: bio real
-        photo: '/images/team/seba.jpg', // TODO: agregar foto real
+        name: 'Sebastián Dillon',
+        credential: 'Prof. y Lic. en Diseño Multimedial (UNLP)',
+        bio: 'Co-Fundador de Experiencia Maker y Experiencia Bot. Docente de tecnología con más de 20 años en educación. Coordinador de instituciones. Desarrolla e implementa la propuesta pedagógica.',
+        photo: '/images/team/sebastian.png',
       },
     ],
     linkLabel: 'Conocernos mejor',
@@ -205,15 +210,15 @@ export const homeContent = {
       {
         question: '¿Cuánto cuesta el servicio?',
         answer:
-          'Los precios varían según el paquete y la escala de la institución. En la primera videollamada presentamos un rango claro adaptado a tu contexto. Sin sorpresas en el proceso.',
+          'Iniciando en 4000 pesos por alumno por mes, los precios varían según el paquete y la escala de la institución. En la primera videollamada presentamos un rango claro adaptado a tu contexto y necesidades. Sin sorpresas en el proceso.',
       },
       {
         question: '¿Quién aporta los kits de robótica? ¿Quedan en el colegio?',
         answer:
-          'Los kits Educabot se proveen en comodato durante todo el año lectivo, sin costo adicional de adquisición. Si la institución quiere incorporarlos a su patrimonio, gestionamos la compra a precio preferencial.',
+          'En caso de ya tener kits adaptamos la propuesta para implementarlos. En caso de necesitar nuevos, nuestro aliado Educabot provee excelentes opciones en comodato durante todo el ciclo lectivo, a precio preferencial por trabajar con nosotros. Si la institución quiere incorporarlos a su patrimonio, puede realizar la compra.',
       },
       {
-        question: '¿Qué hace el coordinador pedagógico concretamente?',
+        question: '¿Qué hace el/la coordinador/a pedagógico/a concretamente?',
         answer:
           'Visita la institución periódicamente, acompaña a los docentes en la implementación del plan, genera informes de avance y está disponible por canal permanente para consultas pedagógicas y técnicas.',
       },
@@ -225,13 +230,7 @@ export const homeContent = {
       {
         question: '¿Los docentes los aportan ustedes o los del colegio?',
         answer:
-          'En BASE y FULL trabajamos con los docentes del área tecnológica de la institución, a quienes capacitamos y acompañamos. En EXTRACURRICULAR, La Bot lleva sus propios docentes para las actividades.',
-      },
-      {
-        question: '¿Las certificaciones tienen validez ante el Ministerio de Educación?',
-        // TODO: confirmar alcance legal exacto con Nacho antes de publicar
-        answer:
-          'Las certificaciones son emitidas por UTN Regional La Plata, Educabot y Code.org. Acreditan formalmente los saberes tecnológicos de los alumnos ante familias y organismos educativos.',
+          'Los docentes del área tecnológica de la institución no serán reemplazados, acompañamos y capacitamos para que puedan adaptarse a la nueva propuesta y crecer junto con la institución. Pero si no tuviesen o necesitaran sumar personal, los ayudamos en la búsqueda y selección del mismo.',
       },
     ],
     linkLabel: 'Ver todas las preguntas',
@@ -243,7 +242,7 @@ export const homeContent = {
     description:
       'Reservá una videollamada de 30 minutos con Ignacio Alonso. Sin compromiso, sin formularios. Solo una conversación para entender si podemos ayudarte.',
     cta: {
-      label: 'Reservar videollamada',
+      label: 'Agendá tu llamada',
       href: 'https://calendly.com/PLACEHOLDER', // TODO: URL real de Calendly de Nacho
     },
     whatsapp: {

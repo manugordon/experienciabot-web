@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import AnimateIn from '@/components/ui/AnimateIn'
 import { StaggerList, StaggerItem } from '@/components/ui/StaggerList'
@@ -18,17 +17,17 @@ export default function ProblemSection() {
             <p className="text-[17px] text-black/60">{problem.subheadline}</p>
           </AnimateIn>
 
-          <StaggerList className="flex flex-col divide-y divide-gray-100">
+          <StaggerList className="relative flex flex-col">
+            {/* Vertical circuit line */}
+            <div className="absolute left-[9px] top-3 bottom-3 w-px bg-gray-200" />
+
             {problem.items.map((item, i) => (
               <StaggerItem key={i}>
-                <div className="flex items-center gap-5 py-5">
-                  <Image
-                    src="/images/stick.png"
-                    alt=""
-                    width={52}
-                    height={22}
-                    className="object-contain flex-shrink-0 opacity-70"
-                  />
+                <div className="relative flex items-start gap-6 py-5">
+                  {/* Circuit node — rotated square (diamond) */}
+                  <div className="relative z-10 mt-[5px] w-[18px] h-[18px] flex-shrink-0 flex items-center justify-center">
+                    <div className="w-[10px] h-[10px] rotate-45 bg-brand-yellow border-2 border-brand-yellow" />
+                  </div>
                   <p className="text-[16px] text-black/75 leading-relaxed">{item}</p>
                 </div>
               </StaggerItem>
