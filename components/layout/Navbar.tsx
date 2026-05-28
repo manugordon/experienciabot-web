@@ -77,6 +77,12 @@ export default function Navbar() {
         </nav>
       </Container>
 
+      <div className="flex h-[3px] w-full">
+        <div className="flex-1 bg-brand-yellow" />
+        <div className="flex-1 bg-brand-red" />
+        <div className="flex-1 bg-brand-blue" />
+      </div>
+
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100">
           <Container>
