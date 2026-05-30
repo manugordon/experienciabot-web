@@ -9,7 +9,7 @@ export default function Testimonial() {
   const { quote, author, role, school, photo } = testimonial.fallback
 
   return (
-    <section className="py-20 lg:py-[80px] bg-brand-blue overflow-hidden">
+    <section id="caso-de-estudio" className="py-20 lg:py-[80px] bg-brand-blue overflow-hidden">
       <Container>
         <AnimateIn>
           <h2 className="text-[28px] lg:text-[32px] font-bold text-white mb-12 max-w-xl lg:max-w-none lg:whitespace-nowrap">
@@ -20,8 +20,13 @@ export default function Testimonial() {
         {/* Mobile / tablet layout */}
         <AnimateIn delay={0.15} className="lg:hidden">
           <figure className="flex flex-col items-start gap-8 max-w-2xl">
-            <div className="relative w-20 h-20 flex-shrink-0">
-              <Image src={photo} alt={school} fill className="object-contain" sizes="80px" />
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <div className="relative w-16 h-16">
+                <Image src={photo} alt={school} fill className="object-contain" sizes="64px" />
+              </div>
+              <div className="relative w-16 h-16">
+                <Image src="/images/testimonials/osofeteLogo.png" alt="La Cueva de Osofete" fill className="object-contain" sizes="64px" />
+              </div>
             </div>
             <div>
               <blockquote className="text-[19px] text-white leading-relaxed mb-8 italic">
@@ -41,8 +46,13 @@ export default function Testimonial() {
         {/* Desktop layout */}
         <AnimateIn delay={0.15} className="hidden lg:grid lg:grid-cols-[280px_1fr] gap-16 items-center">
           <div className="flex flex-col items-center gap-5">
-            <div className="relative w-52 h-52">
-              <Image src={photo} alt={school} fill className="object-contain drop-shadow-lg" sizes="208px" />
+            <div className="flex items-center gap-4">
+              <div className="relative w-[104px] h-[104px]">
+                <Image src={photo} alt={school} fill className="object-contain drop-shadow-lg" sizes="104px" />
+              </div>
+              <div className="relative w-[104px] h-[104px]">
+                <Image src="/images/testimonials/osofeteLogo.png" alt="La Cueva de Osofete" fill className="object-contain drop-shadow-lg" sizes="104px" />
+              </div>
             </div>
             <p className="text-[13px] text-white/50 text-center tracking-wide uppercase">{school}</p>
           </div>

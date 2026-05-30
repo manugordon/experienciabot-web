@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Zap, LayoutGrid, Award, ChevronDown } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Zap, LayoutGrid, Award } from 'lucide-react'
 import Container from '@/components/ui/Container'
 import { homeContent } from '@/content/home'
 
@@ -18,7 +18,6 @@ type CardId = keyof typeof cardStyles
 
 function PackageCard({ pkg }: { pkg: (typeof packages.items)[number] }) {
   const [hovered, setHovered] = useState(false)
-  const [expanded, setExpanded] = useState(false)
   const c = cardStyles[pkg.id as CardId] ?? cardStyles.base
   const { Icon } = c
 
@@ -98,25 +97,14 @@ function PackageCard({ pkg }: { pkg: (typeof packages.items)[number] }) {
         </div>
 
         {/* Description */}
-        <div className="flex-1 flex flex-col gap-2">
+        <div className="flex-1">
           <motion.p
-            className="text-[15px] leading-relaxed overflow-hidden"
-            style={{ WebkitLineClamp: expanded ? 'unset' : 3, display: '-webkit-box', WebkitBoxOrient: 'vertical' }}
+            className="text-[15px] leading-relaxed"
             animate={{ color: hovered ? fgBody : 'rgba(0,0,0,0.65)' }}
             transition={{ duration: 0.22 }}
           >
             {pkg.description}
           </motion.p>
-          <button
-            onClick={(e) => { e.stopPropagation(); setExpanded(v => !v) }}
-            className="flex items-center gap-1 text-[13px] font-medium w-fit transition-colors duration-150"
-            style={{ color: hovered ? fgBtn : 'rgba(0,0,0,0.38)' }}
-          >
-            {expanded ? 'Ver menos' : 'Ver más'}
-            <motion.span animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
-              <ChevronDown size={14} />
-            </motion.span>
-          </button>
         </div>
 
         {/* CTA */}
@@ -140,10 +128,14 @@ function PackageCard({ pkg }: { pkg: (typeof packages.items)[number] }) {
 }
 
 export default function Packages() {
-  const [activeTab, setActiveTab] = useState<string>(packages.items[0].id)
-  const [mobileExpanded, setMobileExpanded] = useState(false)
+  const [activeTab, setActiveTab] = useState<string>('full')
   const activePackage = packages.items.find((p) => p.id === activeTab) ?? packages.items[0]
   const ac = cardStyles[activePackage.id as CardId] ?? cardStyles.base
+
+  const mobileOrder = ['full', 'base', 'starters']
+  const mobileItems = [...packages.items].sort(
+    (a, b) => mobileOrder.indexOf(a.id) - mobileOrder.indexOf(b.id)
+  )
 
   return (
     <section id="paquetes" className="py-20 lg:py-[80px] bg-surface-gray">
@@ -170,7 +162,7 @@ export default function Packages() {
         {/* Mobile: tabs + static card */}
         <div className="lg:hidden mb-8">
           <div className="flex rounded-xl overflow-hidden mb-6 border border-gray-200">
-            {packages.items.map((pkg) => {
+            {mobileItems.map((pkg) => {
               const tc = cardStyles[pkg.id as CardId] ?? cardStyles.base
               const active = activeTab === pkg.id
               return (
@@ -215,22 +207,10 @@ export default function Packages() {
                 </h3>
                 <p className="text-[14px] text-black/50">{activePackage.tagline}</p>
               </div>
-              <div className="flex flex-col gap-2">
-                <p
-                  className="text-[15px] text-black/65 leading-relaxed overflow-hidden"
-                  style={{ WebkitLineClamp: mobileExpanded ? 'unset' : 3, display: '-webkit-box', WebkitBoxOrient: 'vertical' }}
-                >
+              <div>
+                <p className="text-[15px] text-black/65 leading-relaxed">
                   {activePackage.description}
                 </p>
-                <button
-                  onClick={() => setMobileExpanded(v => !v)}
-                  className="flex items-center gap-1 text-[13px] font-medium text-black/40 w-fit"
-                >
-                  {mobileExpanded ? 'Ver menos' : 'Ver más'}
-                  <motion.span animate={{ rotate: mobileExpanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                    <ChevronDown size={14} />
-                  </motion.span>
-                </button>
               </div>
               <a
                 href={activePackage.ctaHref}
@@ -245,7 +225,17 @@ export default function Packages() {
           </div>
         </div>
 
-        <p className="text-[14px] text-black/50">{packages.disclaimerText}</p>
+        <p className="text-[14px] text-black/50">
+          {packages.disclaimerText}{' '}
+          <a
+            href={packages.disclaimerWsp.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-black/70 transition-colors duration-150"
+          >
+            {packages.disclaimerWsp.label}
+          </a>
+        </p>
       </Container>
     </section>
   )

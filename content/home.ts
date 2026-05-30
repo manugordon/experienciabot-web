@@ -4,7 +4,7 @@ export const homeContent = {
     subheadline:
       'Los dispositivos no alcanzan. Hace falta un proyecto detrás, ese es nuestro trabajo.',
     description:
-      'Tus estudiantes van a necesitar la tecnología como si fuera su idioma nativo. Nosotros construimos ese camino con tu institución, de jardín a secundaria, con coherencia pedagógica en cada nivel y certificaciones que lo acreditan, un/a coordinador/a dedicado/a, currícula actualizada, docentes formados y familias informadas.',
+      'Tus estudiantes van a necesitar la tecnología como si fuera su idioma nativo. Nosotros construimos ese camino con tu institución, de nivel inicial a secundaria, con coherencia pedagógica en cada nivel y certificaciones que lo acreditan, un/a coordinador/a dedicado/a, currícula actualizada, docentes formados y familias informadas.',
     ctaPrimary: {
       label: 'Agendá tu llamada',
       href: 'https://calendly.com/PLACEHOLDER', // TODO: URL real de Calendly de Nacho
@@ -15,7 +15,7 @@ export const homeContent = {
     },
     whatsapp: {
       label: 'Prefiero escribir por WhatsApp',
-      href: 'https://wa.me/5492215053158',
+      href: 'https://wa.me/5492215479388',
     },
   },
 
@@ -125,7 +125,7 @@ export const homeContent = {
         name: 'STARTERS',
         tagline: 'La puerta de entrada',
         description:
-          'Si tu colegio todavía está explorando cómo incorporar tecnología educativa, o si buscás potenciar lo que ya están haciendo, Starters es la opción para arrancar sin presiones. Acompañamos de cerca la implementación de un taller o espacio extracurricular: te damos la currícula, los materiales y el soporte para que tu equipo pueda llevarlo adelante. Es la forma perfecta de conocernos, ver cómo trabajamos y evaluar si querés dar el siguiente paso.',
+          'Talleres extracurriculares con currícula, materiales y soporte incluidos. La forma perfecta de incorporar tecnología sin presiones y conocer cómo trabajamos.',
         recommended: false,
         cta: 'Agendá tu llamada',
         ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
@@ -135,7 +135,7 @@ export const homeContent = {
         name: 'BASE',
         tagline: 'Primer paso sólido',
         description:
-          'Todo el respaldo pedagógico y curricular del plan Full, con un alcance más acotado. Ideal para instituciones que quieren dar un primer paso sólido sin comprometer todos los niveles o áreas de una vez. Misma calidad, mismo acompañamiento, implementación más gradual.',
+          'Respaldo pedagógico y curricular completo, con implementación gradual. El primer paso sólido hacia la integración tecnológica real en tu institución.',
         recommended: false,
         cta: 'Agendá tu llamada',
         ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
@@ -145,13 +145,17 @@ export const homeContent = {
         name: 'FULL',
         tagline: 'El programa completo',
         description:
-          'Diseñamos la currícula tecnológica de tu institución, capacitamos a tus docentes y acompañamos durante todo el año con un/a coordinador/a que visita la institución todos los meses. Es la opción para colegios que quieren que la tecnología educativa sea una parte real y sostenida de su propuesta pedagógica — no un taller aislado, sino algo que atraviesa toda la institución, da herramientas a todo el equipo docente y deja huella real en sus estudiantes.',
+          'Gestión integral del área tecnológica: currícula, capacitación docente y coordinador/a dedicado que visita tu institución todos los meses.',
         recommended: true,
         cta: 'Agendá tu llamada',
         ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
       },
     ],
     disclaimerText: '¿No sabés cuál elegir? En la videollamada lo vemos juntos.',
+    disclaimerWsp: {
+      label: 'o escribinos por WhatsApp',
+      href: 'https://wa.me/5492215479388',
+    },
     oneshotText: '¿Buscás una actividad puntual?',
     oneshotLinkLabel: 'Ver menú de actividades',
     oneshotLinkHref: '/paquetes#oneshot',
@@ -240,14 +244,14 @@ export const homeContent = {
   finalCta: {
     headline: '¿Tu institución está lista para dar el siguiente paso?',
     description:
-      'Reservá una videollamada de 30 minutos con Ignacio Alonso. Sin compromiso, sin formularios. Solo una conversación para entender si podemos ayudarte.',
+      'Reservá una videollamada de 30 minutos con alguien de nuestro equipo. Sin compromiso, sin formularios. Solo una conversación para entender si podemos ayudarte.',
     cta: {
       label: 'Agendá tu llamada',
       href: 'https://calendly.com/PLACEHOLDER', // TODO: URL real de Calendly de Nacho
     },
     whatsapp: {
       label: 'Prefiero escribir por WhatsApp',
-      href: 'https://wa.me/5492215053158',
+      href: 'https://wa.me/5492215479388',
     },
   },
 } as const

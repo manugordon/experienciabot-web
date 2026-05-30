@@ -21,6 +21,8 @@ export default function Footer() {
               Educación transversal para un mundo digital.
               <br />
               La Bot — Calle 20 N°470, La Loma, La Plata.
+              <br />
+              Experiencia Maker — Calle 11 N° 4393, Berisso.
             </p>
           </div>
 
@@ -49,15 +51,15 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
-                  href="mailto:nacho.alonso44@gmail.com"
+                  href="mailto:contacto@experienciabot.ar"
                   className="text-[15px] text-black/70 hover:text-black transition-colors duration-150"
                 >
-                  nacho.alonso44@gmail.com
+                  contacto@experienciabot.ar
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/5492215053158"
+                  href="https://wa.me/5492215479388"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[15px] text-black/70 hover:text-black transition-colors duration-150"

@@ -8,7 +8,7 @@ const { team } = homeContent
 
 export default function TeamPreview() {
   return (
-    <section id="quienes-somos" className="py-20 lg:py-[80px] bg-surface-gray">
+    <section id="quienes-somos" className="py-20 lg:py-[80px] bg-white">
       <Container>
         <AnimateIn className="max-w-xl mb-12">
           <h2 className="text-[32px] lg:text-[36px] font-bold leading-[1.2] text-black mb-4">

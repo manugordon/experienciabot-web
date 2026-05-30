@@ -21,7 +21,7 @@ export default function HomePage() {
         <CredibilityStrip />
         <ProblemSection />
         <WhatWeDo />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <HowWeWork />
         <Packages />
         <CaseStudyPreview />

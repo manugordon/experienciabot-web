@@ -8,7 +8,7 @@ const { caseStudy } = homeContent
 
 export default function CaseStudyPreview() {
   return (
-    <section id="caso-de-estudio" className="py-20 lg:py-[80px] bg-white">
+    <section id="caso-de-estudio" className="py-20 lg:py-[80px] bg-[#e8eef7]">
       <Container>
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           <AnimateIn direction="left" className="lg:col-span-7">
@@ -30,13 +30,22 @@ export default function CaseStudyPreview() {
                   sizes="48px"
                 />
               </div>
+              <div className="relative w-24 h-10">
+                <Image
+                  src="/images/testimonials/innovaEstudiantes.png"
+                  alt="Innova Estudiantes"
+                  fill
+                  className="object-contain"
+                  sizes="96px"
+                />
+              </div>
             </div>
           </AnimateIn>
 
-          <StaggerList className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:col-span-4 lg:col-start-9">
+          <StaggerList className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:col-span-4 lg:col-start-9 items-stretch">
             {caseStudy.metrics.map((metric, i) => (
-              <StaggerItem key={i}>
-                <div className="bg-surface-gray rounded-xl px-5 py-4 text-center hover:bg-brand-blue group transition-all duration-300">
+              <StaggerItem key={i} className="h-full">
+                <div className="h-full bg-white border border-gray-200 rounded-xl px-5 py-4 text-center hover:bg-brand-blue group transition-all duration-300 flex items-center justify-center">
                   <p className="text-[14px] font-bold text-black group-hover:text-white transition-colors duration-300 leading-snug">
                     {metric.value}
                   </p>
