@@ -7,7 +7,7 @@ export const homeContent = {
       'Tus estudiantes van a necesitar la tecnología como si fuera su idioma nativo. Nosotros construimos ese camino con tu institución, de nivel inicial a secundaria, con coherencia pedagógica en cada nivel y certificaciones que lo acreditan, un/a coordinador/a dedicado/a, currícula actualizada, docentes formados y familias informadas.',
     ctaPrimary: {
       label: 'Agendá tu llamada',
-      href: 'https://calendly.com/PLACEHOLDER', // TODO: URL real de Calendly de Nacho
+      href: 'https://calendly.com/experienciabot/30min', // TODO: URL real de Calendly de Nacho
     },
     ctaSecondary: {
       label: 'Ver propuestas',
@@ -128,7 +128,7 @@ export const homeContent = {
           'Talleres extracurriculares con currícula, materiales y soporte incluidos. La forma perfecta de incorporar tecnología sin presiones y conocer cómo trabajamos.',
         recommended: false,
         cta: 'Agendá tu llamada',
-        ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
+        ctaHref: 'https://calendly.com/experienciabot/30min', // TODO
       },
       {
         id: 'base',
@@ -138,7 +138,7 @@ export const homeContent = {
           'Respaldo pedagógico y curricular completo, con implementación gradual. El primer paso sólido hacia la integración tecnológica real en tu institución.',
         recommended: false,
         cta: 'Agendá tu llamada',
-        ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
+        ctaHref: 'https://calendly.com/experienciabot/30min', // TODO
       },
       {
         id: 'full',
@@ -148,7 +148,7 @@ export const homeContent = {
           'Gestión integral del área tecnológica: currícula, capacitación docente y coordinador/a dedicado que visita tu institución todos los meses.',
         recommended: true,
         cta: 'Agendá tu llamada',
-        ctaHref: 'https://calendly.com/PLACEHOLDER', // TODO
+        ctaHref: 'https://calendly.com/experienciabot/30min', // TODO
       },
     ],
     disclaimerText: '¿No sabés cuál elegir? En la videollamada lo vemos juntos.',
@@ -247,7 +247,7 @@ export const homeContent = {
       'Reservá una videollamada de 30 minutos con alguien de nuestro equipo. Sin compromiso, sin formularios. Solo una conversación para entender si podemos ayudarte.',
     cta: {
       label: 'Agendá tu llamada',
-      href: 'https://calendly.com/PLACEHOLDER', // TODO: URL real de Calendly de Nacho
+      href: 'https://calendly.com/experienciabot/30min', // TODO: URL real de Calendly de Nacho
     },
     whatsapp: {
       label: 'Prefiero escribir por WhatsApp',

@@ -9,6 +9,6 @@ export const navigationContent = {
   cta: {
     label: 'Agendá tu llamada',
     // TODO: reemplazar con URL real de Calendly de Nacho
-    href: 'https://calendly.com/PLACEHOLDER',
+    href: 'https://calendly.com/experienciabot/30min',
   },
 } as const
