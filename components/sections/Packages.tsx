@@ -168,7 +168,7 @@ export default function Packages() {
               return (
                 <button
                   key={pkg.id}
-                  onClick={() => { setActiveTab(pkg.id); setMobileExpanded(false) }}
+                  onClick={() => { setActiveTab(pkg.id) }}
                   className="flex-1 py-3 text-[13px] font-bold transition-colors duration-150"
                   style={
                     active
