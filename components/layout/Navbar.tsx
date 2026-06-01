@@ -85,31 +85,43 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100">
-          <Container>
-            <ul className="py-6 flex flex-col gap-6">
-              {navigationContent.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-[17px] font-medium text-black"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2">
+        <div className="lg:hidden bg-white border-t border-gray-100 fixed top-[67px] left-0 right-0 bottom-0 flex flex-col">
+          <Container className="flex-1 flex flex-col">
+            <div className="py-6 flex flex-col gap-6">
+              <ul className="flex flex-col gap-6">
+                {navigationContent.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-[17px] font-medium text-black"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col gap-3 pt-2">
                 <Button
                   href={navigationContent.cta.href}
                   external
                   size="lg"
                   className="w-full text-center"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {navigationContent.cta.label}
                 </Button>
-              </li>
-            </ul>
+                <a
+                  href="https://wa.me/5492215479388"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full text-center py-3 px-5 rounded-xl text-[15px] font-bold border-2 border-brand-blue text-brand-blue"
+                >
+                  Contactar por WhatsApp
+                </a>
+              </div>
+            </div>
           </Container>
         </div>
       )}
