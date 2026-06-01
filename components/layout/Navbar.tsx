@@ -101,13 +101,12 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-col gap-3 pt-2">
+              <div className="flex flex-col gap-3 pt-2" onClick={() => setIsMenuOpen(false)}>
                 <Button
                   href={navigationContent.cta.href}
                   external
                   size="lg"
                   className="w-full text-center"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {navigationContent.cta.label}
                 </Button>
@@ -115,7 +114,6 @@ export default function Navbar() {
                   href="https://wa.me/5492215479388"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
                   className="w-full text-center py-3 px-5 rounded-xl text-[15px] font-bold border-2 border-brand-blue text-brand-blue"
                 >
                   Contactar por WhatsApp
