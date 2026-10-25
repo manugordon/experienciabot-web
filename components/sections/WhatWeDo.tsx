@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import AnimateIn from '@/components/ui/AnimateIn'
+import Button from '@/components/ui/Button'
 import { StaggerList, StaggerItem } from '@/components/ui/StaggerList'
 import { homeContent } from '@/content/home'
 
@@ -33,11 +34,26 @@ export default function WhatWeDo() {
                   className="mb-6 object-contain"
                 />
                 <h3 className="text-[20px] font-bold text-black mb-3">{card.title}</h3>
-                <p className="text-[15px] text-black/70 leading-relaxed">{card.description}</p>
+                <div className="flex flex-col gap-3">
+                  {card.items.map((item, j) => (
+                    <p key={j} className="text-[15px] text-black/70 leading-relaxed">
+                      {item.lead && <strong className="font-bold text-black">{item.lead} </strong>}
+                      {item.text}
+                    </p>
+                  ))}
+                </div>
               </div>
             </StaggerItem>
           ))}
         </StaggerList>
+        <AnimateIn className="mt-12 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+          <p className="text-[17px] lg:text-[19px] font-medium text-black/80 leading-snug max-w-3xl">
+            {whatWeDo.closing}
+          </p>
+          <Button href={whatWeDo.cta.href} external size="lg" className="shrink-0 w-fit">
+            {whatWeDo.cta.label}
+          </Button>
+        </AnimateIn>
       </Container>
     </section>
   )

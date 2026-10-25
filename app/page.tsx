@@ -6,7 +6,7 @@ import ProblemSection from '@/components/sections/ProblemSection'
 import WhatWeDo from '@/components/sections/WhatWeDo'
 import Testimonial from '@/components/sections/Testimonial'
 import HowWeWork from '@/components/sections/HowWeWork'
-import Packages from '@/components/sections/Packages'
+import Proposal from '@/components/sections/Proposal'
 import CaseStudyPreview from '@/components/sections/CaseStudyPreview'
 import TeamPreview from '@/components/sections/TeamPreview'
 import FAQPreview from '@/components/sections/FAQPreview'
@@ -23,7 +23,7 @@ export default function HomePage() {
         <WhatWeDo />
         {/* <Testimonial /> */}
         <HowWeWork />
-        <Packages />
+        <Proposal />
         <CaseStudyPreview />
         <TeamPreview />
         <FAQPreview />

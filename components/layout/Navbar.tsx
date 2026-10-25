@@ -111,7 +111,7 @@ export default function Navbar() {
                   {navigationContent.cta.label}
                 </Button>
                 <a
-                  href="https://wa.me/5492215479388"
+                  href="https://wa.me/5492216082818"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center py-3 px-5 rounded-xl text-[15px] font-bold border-2 border-brand-blue text-brand-blue"

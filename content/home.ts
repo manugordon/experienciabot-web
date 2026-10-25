@@ -1,30 +1,32 @@
+const CALENDLY_URL = 'https://calendly.com/experienciabot/30min'
+const WHATSAPP_URL = 'https://wa.me/5492216082818'
+
 export const homeContent = {
   hero: {
     headline: 'Que la tecnología en tu colegio tenga sentido.',
     subheadline:
-      'Los dispositivos no alcanzan. Hace falta un proyecto detrás, ese es nuestro trabajo.',
+      'Los dispositivos no alcanzan: hace falta un proyecto detrás, ese es nuestro trabajo.',
     description:
-      'Tus estudiantes van a necesitar la tecnología como si fuera su idioma nativo. Nosotros construimos ese camino con tu institución, de nivel inicial a secundaria, con coherencia pedagógica en cada nivel y certificaciones que lo acreditan, un/a coordinador/a dedicado/a, currícula actualizada, docentes formados y familias informadas.',
+      'Tus estudiantes van a necesitar la tecnología como si fuera su idioma nativo. Nosotros construimos ese camino con tu institución, de nivel inicial a secundaria, con coherencia pedagógica en cada nivel, kit tecnológico propio, un/a coordinador/a pedagógico/a dedicado/a, currícula actualizada, docentes formados y familias informadas.',
     ctaPrimary: {
       label: 'Agendá tu llamada',
-      href: 'https://calendly.com/experienciabot/30min', // TODO: URL real de Calendly de Nacho
+      href: CALENDLY_URL,
     },
     ctaSecondary: {
-      label: 'Ver propuestas',
-      href: '/#paquetes',
+      label: 'Conocé la propuesta',
+      href: '/#propuesta',
     },
     whatsapp: {
       label: 'Prefiero escribir por WhatsApp',
-      href: 'https://wa.me/5492215479388',
+      href: WHATSAPP_URL,
     },
   },
 
   credibility: {
     label: 'Avalados por instituciones académicas y tecnológicas de referencia',
     items: [
-      // { name: 'UTN Regional La Plata', type: 'logo' as const }, // pendiente de aval
-      // { name: 'Code.org', type: 'logo' as const }, // pendiente de autorización
-      { name: 'Educabot', type: 'logo' as const },
+      { name: 'Colegio Manantiales', src: '/images/testimonials/manantiales25.png' },
+      { name: 'La Cueva de Osofete', src: '/images/testimonials/osofeteLogo.png' },
     ],
   },
 
@@ -40,26 +42,46 @@ export const homeContent = {
   },
 
   whatWeDo: {
-    headline: 'Una gestión integral que cubre los tres frentes',
+    headline: 'Una gestión integral que cubre tres pilares fundamentales',
     cards: [
       {
         title: 'Gestión pedagógica y curricular',
-        description:
-          'Diseñamos la currícula anual adaptada a las necesidades de tu institución. Secuencias didácticas por sala, grado y año, con actividades alineadas al diseño curricular jurisdiccional y a directrices de ODS UNESCO 2030, UNICEF y OMS. La planificación del año, resuelta.',
+        items: [
+          {
+            lead: '',
+            text: 'Diseñamos la currícula anual adaptada a las necesidades de tu institución. Secuencias didácticas por sala, grado y año, con proyectos y cápsulas pedagógicas integrales, alineadas a los NAP, al Diseño Curricular Jurisdiccional correspondiente y a directrices de ODS UNESCO 2030, UNICEF y OMS.',
+          },
+        ],
       },
       {
         title: 'Acompañamiento institucional y docente',
-        description:
-          'Un/a coordinador/a pedagógico/a dedicado/a con visitas periódicas, informes de seguimiento y canal permanente de asesoría. Capacitación continua para docentes del área y de otras áreas.',
+        items: [
+          {
+            lead: 'Capacitación docente.',
+            text: 'Una capacitación intensiva a principio de año para que tus docentes trabajen con autonomía y confianza desde la primera clase.',
+          },
+          {
+            lead: 'Acompañamiento todo el año.',
+            text: 'Un/a coordinador/a pedagógico/a dedicado/a, canal de consulta, reuniones e informes para que el equipo directivo vea qué se implementó y qué aprendieron los/as estudiantes.',
+          },
+        ],
       },
       {
-        title: 'Recursos tecnológicos y certificaciones',
-        description:
-          'Validación del equipamiento existente, kits de robótica en comodato, recursos a precio preferencial y certificaciones oficiales avaladas.',
+        title: 'Recursos tecnológicos',
+        items: [
+          {
+            lead: 'Kit tecnológico a medida.',
+            text: 'Nuestro kit propio, en comodato y con mantenimiento incluido. Se adapta a cada nivel y a la realidad de tu colegio.',
+          },
+        ],
       },
     ],
-    linkLabel: 'Ver metodología completa',
-    linkHref: '/como-trabajamos',
+    closing:
+      'La dirección no compra clases o kits sueltos: obtiene una solución para implementar, acompañar y evaluar la educación tecnológica de su institución durante todo el año.',
+    cta: {
+      label: 'Agendá tu llamada',
+      href: CALENDLY_URL,
+    },
   },
 
   testimonial: {
@@ -84,95 +106,93 @@ export const homeContent = {
         number: '01',
         title: 'Nos conocemos',
         description:
-          'Videollamada de 30 minutos para entendernos: nos das contexto, haces consultas y entendemos las necesidades y posibilidades de tu institución, gratis, sin compromiso de nada.',
+          'Videollamada gratuita de 30 minutos para entender el contexto y las necesidades de tu institución.',
       },
       {
         number: '02',
         title: 'Diagnóstico gratuito',
         description:
-          'Visitamos tu institución y realizamos un relevamiento total del área tecnológica: equipamiento, currícula actual, perfil docente. Entregamos un informe de situación.',
+          'Relevamos el área tecnológica (equipamiento, currícula actual y perfil docente), de forma presencial o virtual, y te entregamos un informe de situación.',
       },
       {
         number: '03',
-        title: 'Propuesta y paquete',
+        title: 'Propuesta integral a medida',
         description:
-          'Presentamos el plan anual adaptado a tu institución. Elegís el formato que mejor se ajusta al presupuesto y momento del colegio.',
+          'Te presentamos una propuesta única, armada a partir del diagnóstico y pensada para tu colegio.',
       },
       {
         number: '04',
         title: 'Inicio y capacitación',
         description:
-          'Kick-off con el equipo docente, puesta en marcha del plan pedagógico y coordinador/a asignado/a con capacitaciones a todos los docentes.',
+          'Kick-off con el equipo docente, entrega del kit Bot Lab, asignación del/la coordinador/a y capacitación intensiva inicial.',
       },
       {
         number: '05',
         title: 'Seguimiento continuo',
         description:
-          'Visitas periódicas, informes de avance, ajustes en tiempo real. El/La coordinador/a está disponible durante todo el año.',
+          'Visitas, informes y disponibilidad del/la coordinador/a durante todo el año.',
       },
     ],
     linkLabel: 'Ver proceso completo',
     linkHref: '/como-trabajamos',
   },
 
-  packages: {
-    headline: 'Tres formatos para cada momento del colegio',
+  proposal: {
+    headline: 'Una propuesta concreta y situada, pensada para tu colegio',
     subheadline:
-      'No todos los colegios necesitan lo mismo ni están en el mismo punto. Los tres paquetes cubren distintos niveles de compromiso y presupuesto.',
-    items: [
-      {
-        id: 'starters',
-        name: 'STARTERS',
-        tagline: 'La puerta de entrada',
-        description:
-          'Talleres extracurriculares con currícula, materiales y soporte incluidos. La forma perfecta de incorporar tecnología sin presiones y conocer cómo trabajamos.',
-        recommended: false,
-        cta: 'Agendá tu llamada',
-        ctaHref: 'https://calendly.com/experienciabot/30min', // TODO
-      },
-      {
-        id: 'base',
-        name: 'BASE',
-        tagline: 'Primer paso sólido',
-        description:
-          'Respaldo pedagógico y curricular completo, con implementación gradual. El primer paso sólido hacia la integración tecnológica real en tu institución.',
-        recommended: false,
-        cta: 'Agendá tu llamada',
-        ctaHref: 'https://calendly.com/experienciabot/30min', // TODO
-      },
-      {
-        id: 'full',
-        name: 'FULL',
-        tagline: 'El programa completo',
-        description:
-          'Gestión integral del área tecnológica: currícula, capacitación docente y coordinador/a dedicado que visita tu institución todos los meses.',
-        recommended: true,
-        cta: 'Agendá tu llamada',
-        ctaHref: 'https://calendly.com/experienciabot/30min', // TODO
-      },
+      'Partimos del diagnóstico gratuito de tu institución y armamos una propuesta integral a medida, que se adapta al proyecto educativo institucional y a tu equipo docente. Con los recursos adecuados para cada caso.',
+    label: 'Propuesta integral para tu colegio',
+    pillarsLabel: 'Integra los tres ejes centrales',
+    pillars: [
+      'Gestión pedagógica y curricular',
+      'Acompañamiento institucional y docente',
+      'Recursos tecnológicos',
     ],
-    disclaimerText: '¿No sabés cuál elegir? En la videollamada lo vemos juntos.',
-    disclaimerWsp: {
-      label: 'o escribinos por WhatsApp',
-      href: 'https://wa.me/5492215479388',
+    cta: {
+      label: 'Agendá tu llamada',
+      href: CALENDLY_URL,
     },
-    oneshotText: '¿Buscás una actividad puntual?',
-    oneshotLinkLabel: 'Ver menú de actividades',
-    oneshotLinkHref: '/paquetes#oneshot',
+    oneshot: {
+      label: 'Actividades puntuales',
+      headline: '¿Buscás una actividad puntual?',
+      description:
+        'Para instituciones, organizaciones o eventos que quieran sumar una experiencia tecnológica de una sola jornada o un taller corto.',
+      items: [
+        'Capacitación docente (2 a 4 h)',
+        'Charla para familias sobre cuidados digitales',
+        'Taller de IA (11 a 18 años)',
+        'Robótica educativa (6 a 12 años)',
+        'Taller Maker (6 a 14 años)',
+        'Programación de videojuegos (9 a 16 años)',
+      ],
+      cta: {
+        label: 'Consultá por WhatsApp',
+        href: WHATSAPP_URL,
+      },
+    },
   },
 
   caseStudy: {
     headline: 'Organizaciones que nos eligen',
-    description:
-      'Junto al Club Estudiantes de La Plata, llevamos adelante Estudiantes Innova 2026: un programa integral de talleres gratuitos abiertos a toda la comunidad. Como socios pedagógicos y directores del proyecto, nuestro objetivo es convertir al club en un referente nacional de innovación educativa.',
-    metrics: [
-      { value: 'Robótica Educativa', label: '' },
-      { value: 'Programación de Videojuegos', label: '' },
-      { value: 'Inteligencia Artificial', label: '' },
-      { value: 'Talleres Maker', label: '' },
+    cases: [
+      {
+        title: 'Colegio Manantiales',
+        description:
+          'Acompañamos a Colegio Manantiales en la integración de la robótica, la programación y la tecnología en Inicial y Primaria, con capacitación docente, currícula propia y seguimiento durante todo el ciclo lectivo.',
+        logos: [{ src: '/images/testimonials/manantiales25.png', alt: 'Colegio Manantiales' }],
+        topics: [] as string[],
+      },
+      {
+        title: 'Estudiantes Innova 2026',
+        description:
+          'Junto a Estudiantes Innova, llevamos adelante un programa de talleres gratuitos abiertos a la comunidad.',
+        logos: [
+          { src: '/images/testimonials/estudiantesDeLaPlata.png', alt: 'Club Estudiantes de La Plata' },
+          { src: '/images/testimonials/innovaEstudiantes.png', alt: 'Innova Estudiantes' },
+        ],
+        topics: ['Robótica Educativa', 'Programación de Videojuegos', 'Inteligencia Artificial', 'Talleres Maker'],
+      },
     ],
-    linkLabel: 'Conocer el proyecto',
-    linkHref: '/caso-de-estudio',
   },
 
   team: {
@@ -180,21 +200,25 @@ export const homeContent = {
     subheadline: 'Cuando reservás una videollamada, hablás con nosotros.',
     members: [
       {
-        name: 'Ignacio Alonso',
-        credential: 'Ingeniero Industrial (UNLP)',
-        bio: 'Co-Fundador de La Bot y Experiencia Bot. Docente y coordinador de instituciones. Gestión e implementación del proyecto.',
-        photo: '/images/team/ignacio.PNG',
-      },
-      {
         name: 'Paula Olavarría',
-        credential: 'Ingeniera Industrial (UTN La Plata)',
-        bio: 'Co-Fundadora de La Bot y Experiencia Bot. Docente y coordinadora de instituciones. Coordina los vínculos institucionales y el desarrollo del proyecto.',
+        role: 'Directora General de Estrategia Comercial y Alianzas (contacto comercial)',
+        credential: 'Ingeniera Industrial (UTN La Plata). Co-fundadora de La Bot y Experiencia Bot.',
+        bio: 'Docente y coordinadora de instituciones. Coordina los vínculos institucionales y el desarrollo del proyecto.',
         photo: '/images/team/paula.PNG',
       },
       {
+        name: 'Ignacio Alonso',
+        role: 'Director General de Ingeniería, Producto e Innovación Tecnológica',
+        credential: 'Ingeniero Industrial (UNLP). Co-fundador de La Bot y Experiencia Bot.',
+        bio: 'Docente y coordinador de instituciones. Gestión e implementación del proyecto.',
+        photo: '/images/team/ignacio.PNG',
+      },
+      {
         name: 'Sebastián Dillon',
-        credential: 'Prof. y Lic. en Diseño Multimedial (UNLP)',
-        bio: 'Co-Fundador de Experiencia Maker y Experiencia Bot. Docente de tecnología con más de 20 años en educación. Coordinador de instituciones. Desarrolla e implementa la propuesta pedagógica.',
+        role: 'Director General de Pedagogía, Innovación Educativa y Contenidos Académicos',
+        credential:
+          'Prof. y Lic. en Diseño Multimedial (UNLP). Co-fundador de Experiencia Maker y Experiencia Bot, más de 20 años en educación.',
+        bio: 'Docente de tecnología y coordinador de instituciones. Desarrolla e implementa la propuesta pedagógica.',
         photo: '/images/team/sebastian.png',
       },
     ],
@@ -214,27 +238,27 @@ export const homeContent = {
       {
         question: '¿Cuánto cuesta el servicio?',
         answer:
-          'Iniciando en 4000 pesos por alumno por mes, los precios varían según el paquete y la escala de la institución. En la primera videollamada presentamos un rango claro adaptado a tu contexto y necesidades. Sin sorpresas en el proceso.',
+          'Depende de cada colegio. Después del diagnóstico gratuito armamos una propuesta a medida y la cotizamos en base a la matrícula y al alcance acordado.',
       },
       {
         question: '¿Quién aporta los kits de robótica? ¿Quedan en el colegio?',
         answer:
-          'En caso de ya tener kits adaptamos la propuesta para implementarlos. En caso de necesitar nuevos, nuestro aliado Educabot provee excelentes opciones en comodato durante todo el ciclo lectivo, a precio preferencial por trabajar con nosotros. Si la institución quiere incorporarlos a su patrimonio, puede realizar la compra.',
+          'Los aportamos nosotros/as. El kit Bot Lab es propio de Experiencia Bot y se entrega en comodato: queda en el colegio durante todo el ciclo lectivo, y el mantenimiento y la reposición por uso habitual corren por nuestra cuenta.',
       },
       {
         question: '¿Qué hace el/la coordinador/a pedagógico/a concretamente?',
         answer:
-          'Visita la institución periódicamente, acompaña a los docentes en la implementación del plan, genera informes de avance y está disponible por canal permanente para consultas pedagógicas y técnicas.',
+          'Es tu referente en Experiencia Bot: lidera la capacitación inicial, acompaña a los/as docentes durante el año, responde consultas, hace el seguimiento del plan y entrega los informes al equipo directivo. La frecuencia de visitas y reuniones se acuerda con cada colegio.',
       },
       {
         question: '¿Se puede empezar a mitad de año?',
         answer:
-          'Sí. El diagnóstico inicial permite adaptar el plan al momento del ciclo lectivo en el que ingresa la institución. No hay una única ventana de entrada.',
+          'Sí. Ajustamos el plan y la capacitación al momento del ciclo lectivo en que empiece tu colegio.',
       },
       {
         question: '¿Los docentes los aportan ustedes o los del colegio?',
         answer:
-          'Los docentes del área tecnológica de la institución no serán reemplazados, acompañamos y capacitamos para que puedan adaptarse a la nueva propuesta y crecer junto con la institución. Pero si no tuviesen o necesitaran sumar personal, los ayudamos en la búsqueda y selección del mismo.',
+          'Son los/as docentes del colegio. Nuestro trabajo es habilitarlos/as: los/as capacitamos y acompañamos para que puedan dar las clases con autonomía.',
       },
     ],
     linkLabel: 'Ver todas las preguntas',
@@ -247,11 +271,11 @@ export const homeContent = {
       'Reservá una videollamada de 30 minutos con alguien de nuestro equipo. Sin compromiso, sin formularios. Solo una conversación para entender si podemos ayudarte.',
     cta: {
       label: 'Agendá tu llamada',
-      href: 'https://calendly.com/experienciabot/30min', // TODO: URL real de Calendly de Nacho
+      href: CALENDLY_URL,
     },
     whatsapp: {
       label: 'Prefiero escribir por WhatsApp',
-      href: 'https://wa.me/5492215479388',
+      href: WHATSAPP_URL,
     },
   },
 } as const

@@ -12,13 +12,16 @@ export default function CredibilityStrip() {
           {credibility.label}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-          <Image
-            src="/images/testimonials/educabotLogo.svg"
-            alt="Educabot"
-            width={200}
-            height={40}
-            className="opacity-60"
-          />
+          {credibility.items.map((item) => (
+            <Image
+              key={item.name}
+              src={item.src}
+              alt={item.name}
+              width={80}
+              height={80}
+              className="w-16 h-16 lg:w-20 lg:h-20 object-contain opacity-80"
+            />
+          ))}
         </div>
       </Container>
     </section>

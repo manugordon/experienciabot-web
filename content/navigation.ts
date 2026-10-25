@@ -1,6 +1,6 @@
 export const navigationContent = {
   links: [
-    { label: 'Propuestas', href: '/#paquetes' },
+    { label: 'Nuestra propuesta', href: '/#propuesta' },
     { label: 'Cómo trabajamos', href: '/#como-trabajamos' },
     { label: 'Instituciones', href: '/#caso-de-estudio' },
     { label: '¿Quiénes somos?', href: '/#quienes-somos' },

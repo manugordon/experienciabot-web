@@ -28,6 +28,7 @@ export default function TeamPreview() {
                 </div>
                 <div>
                   <p className="text-[17px] font-bold text-black">{member.name}</p>
+                  <p className="text-[14px] font-medium text-brand-blue leading-snug mb-1">{member.role}</p>
                   <p className="text-[13px] text-black/50 mb-2">{member.credential}</p>
                   <p className="text-[14px] text-black/70 leading-relaxed">{member.bio}</p>
                 </div>

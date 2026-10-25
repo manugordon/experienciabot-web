@@ -42,10 +42,10 @@ function StepCard({
   return (
     <motion.div
       style={{ opacity, y }}
-      className="flex flex-col gap-3 lg:px-4 first:pl-0 last:pr-0"
+      className="flex flex-col gap-3 min-w-0 lg:px-4 first:pl-0 last:pr-0"
     >
       <span className="text-[42px] font-bold text-brand-blue/15 leading-none">{step.number}</span>
-      <h3 className="text-[17px] font-bold text-black lg:whitespace-nowrap">{step.title}</h3>
+      <h3 className="text-[17px] font-bold text-black leading-snug lg:min-h-[2.75em]">{step.title}</h3>
       <p className="text-[14px] text-black/60 leading-relaxed">{step.description}</p>
     </motion.div>
   )
